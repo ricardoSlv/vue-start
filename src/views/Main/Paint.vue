@@ -17,7 +17,7 @@
         Clear
       </v-btn>
     </header>
-    <canvas id="brickGame" height="450" width="800"> </canvas>
+    <canvas ref="canvas" height="450" width="800"> </canvas>
   </section>
 </template>
 
@@ -63,7 +63,7 @@ export default Vue.extend({
     },
   },
   mounted() {
-    const cvs = document.getElementById('brickGame') as HTMLCanvasElement;
+    const cvs = this.$refs.canvas as HTMLCanvasElement;
     const ctx = cvs?.getContext('2d');
     this.cvs = cvs;
     this.ctx = ctx;
@@ -83,7 +83,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-#brickGame {
+canvas {
   background: rgb(220, 220, 220);
   border-radius: 25px;
   cursor: pointer;
