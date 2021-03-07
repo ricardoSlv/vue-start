@@ -63,50 +63,18 @@ export default Vue.extend({
     },
   },
   mounted() {
-    // function drawRect(posX: number, ctxIn: CanvasRenderingContext2D) {
-    //   const rectY = 420;
-    //   const rectWidth = 100;
-    //   const rectHeight = 20;
-    //   const cornerRadius = 20;
-    //   ctxIn.strokeRect(
-    //     posX + cornerRadius / 2,
-    //     rectY + cornerRadius / 2,
-    //     rectWidth - cornerRadius,
-    //     rectHeight - cornerRadius,
-    //   );
-    //   ctxIn.fillRect(
-    //     posX + cornerRadius / 2,
-    //     rectY + cornerRadius / 2,
-    //     rectWidth - cornerRadius,
-    //     rectHeight - cornerRadius,
-    //   );
-    // }
     const cvs = document.getElementById('brickGame') as HTMLCanvasElement;
     const ctx = cvs?.getContext('2d');
     this.cvs = cvs;
     this.ctx = ctx;
     if (ctx && cvs) {
-      //   ctx.lineJoin = 'round';
       ctx.lineWidth = 10;
-      //   ctx.fillStyle = 'orange';
-      //   ctx.strokeStyle = 'orange';
-      //   drawRect(20, ctx);
-      // }
       cvs.addEventListener('mousemove', (e) => {
-        if (ctx && cvs) {
-          // ctx.clearRect(0, 420, cvs.width, 20);
-          // ctx.strokeStyle = 'orange';
-
-          // const clamp = (number: number, min: number, max: number) =>
-          //   // eslint-disable-next-line implicit-arrow-linebreak
-          //   Math.max(min, Math.min(number, max));
-          // drawRect(clamp(e.offsetX - 50, 0, 700), ctx);
-          if (e.buttons === 1) {
-            ctx.strokeStyle = colors[this.selectedColor];
-            ctx.beginPath();
-            ctx.arc(e.offsetX, e.offsetY, 5, 0, 2 * Math.PI);
-            ctx.stroke();
-          }
+        if (ctx && cvs && e.buttons === 1) {
+          ctx.strokeStyle = colors[this.selectedColor];
+          ctx.beginPath();
+          ctx.arc(e.offsetX, e.offsetY, 5, 0, 2 * Math.PI);
+          ctx.stroke();
         }
       });
     }
