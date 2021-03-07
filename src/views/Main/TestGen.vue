@@ -1,5 +1,5 @@
 <template>
-  <main class="wrapper">
+  <section>
     <v-btn elevation="4" x-large @click="snackbar.show = true">
       Chamar a Api do Hugo
     </v-btn>
@@ -12,7 +12,7 @@
         </v-btn>
       </section>
     </v-snackbar>
-  </main>
+  </section>
 </template>
 
 <script lang="ts">
@@ -29,12 +29,3 @@ export default Vue.extend({
   }),
 });
 </script>
-
-<style scoped>
-.wrapper {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  place-items: center;
-}
-</style>

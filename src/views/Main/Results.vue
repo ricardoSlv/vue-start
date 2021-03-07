@@ -1,12 +1,10 @@
 <template>
-  <main class="wrapper">
-    <v-data-table
-      :headers="headers"
-      :items="desserts"
-      :items-per-page="5"
-      class="elevation-1"
-    />
-  </main>
+  <v-data-table
+    :headers="headers"
+    :items="desserts"
+    :items-per-page="5"
+    class="elevation-1"
+  />
 </template>
 
 <script>
@@ -110,12 +108,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.wrapper {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  place-items: center;
-}
-</style>

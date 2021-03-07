@@ -3,11 +3,16 @@ import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '@/views/Home.vue';
 
 import Main from '@/views/Main/Index.vue';
+import Default from '@/views/Main/Default.vue';
+
 import TestGen from '@/views/Main/TestGen.vue';
 import Tests from '@/views/Main/Tests.vue';
+
 import Quizz from '@/views/Main/Quizz.vue';
 import Results from '@/views/Main/Results.vue';
-import Default from '@/views/Main/Default.vue';
+
+import Shooter from '@/views/Main/Shooter.vue';
+import Paint from '@/views/Main/Paint.vue';
 
 Vue.use(VueRouter);
 
@@ -19,7 +24,6 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: '/main',
-    name: 'Main',
     component: Main,
     children: [
       {
@@ -46,6 +50,16 @@ const routes: Array<RouteConfig> = [
         path: 'results',
         name: 'Results',
         component: Results,
+      },
+      {
+        path: 'paint',
+        name: 'Paint',
+        component: Paint,
+      },
+      {
+        path: 'shooter',
+        name: 'Shooter',
+        component: Shooter,
       },
     ],
   },

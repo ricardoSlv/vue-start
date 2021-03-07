@@ -1,7 +1,9 @@
 <template>
   <main class="d-flex" style="height: 100%">
     <SideBar :isMobile="isMobile" />
-    <router-view />
+    <v-container class="wrapper">
+      <router-view />
+    </v-container>
   </main>
 </template>
 
@@ -19,3 +21,12 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style scoped>
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+</style>

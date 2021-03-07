@@ -58,7 +58,7 @@ import Vue from 'vue';
 
 export default Vue.extend({
   props: {
-    isMobile: String,
+    isMobile: Boolean,
   },
   data: () => ({
     items: [
@@ -91,6 +91,22 @@ export default Vue.extend({
             icon: 'mdi-chart-box-outline',
             text: 'Results',
             href: '/main/results',
+          },
+        ],
+      },
+      {
+        icon: 'mdi-gamepad-variant-outline',
+        title: 'Funnies',
+        links: [
+          {
+            icon: 'mdi-crosshairs',
+            text: 'Shooter',
+            href: '/main/shooter',
+          },
+          {
+            icon: 'mdi-brush',
+            text: 'Paint',
+            href: '/main/paint',
           },
         ],
       },
