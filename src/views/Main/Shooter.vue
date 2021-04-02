@@ -2,8 +2,8 @@
   <v-container class="shootingZone">
     <header class="d-flex py-2 align-center">
       <v-btn class="px-4" @click="reset" color="primary">Reset</v-btn>
-      <h2 class="text-center px-4 mb-0">Shots: {{ shots }}</h2>
-      <p class="px-4">Shoot 30 targets</p>
+      <h2 class="text-center px-4">Shots: {{ shots }}</h2>
+      <p class="px-4 mb-0">Shoot 30 targets</p>
     </header>
     <main>
       <section v-for="i in 9" :key="i" class="d-flex">

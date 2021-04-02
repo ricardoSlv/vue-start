@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar id="app-bar" app color="primary" flat dark hide-on-scroll>
+    <!-- <v-app-bar id="app-bar" app color="primary" flat dark hide-on-scroll>
       <v-app-bar-nav-icon
         @click="showNav = !showNav"
         v-show="windowWidth < 640"
@@ -62,7 +62,7 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
-    </v-expand-transition>
+    </v-expand-transition> -->
     <router-view :isMobile="windowWidth < 640" />
   </v-app>
 </template>

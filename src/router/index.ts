@@ -14,6 +14,8 @@ import Results from '@/views/Main/Results.vue';
 import Shooter from '@/views/Main/Shooter.vue';
 import Paint from '@/views/Main/Paint.vue';
 
+import Example from '@/views/Example.vue';
+
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
@@ -21,6 +23,11 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/example',
+    name: 'Example',
+    component: Example,
   },
   {
     path: '/main',
